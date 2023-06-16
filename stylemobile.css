@@ -83,6 +83,10 @@
     margin-top: 5%;
   }
 
+  .first img {
+    width: 75%;
+  }
+
   .vm {
     margin-top: 10%;
   }
@@ -420,6 +424,10 @@
 
   .first {
     text-align: center;
+  }
+
+  .first img {
+    width: 75%;
   }
 
   .vm {
