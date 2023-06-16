@@ -15,13 +15,30 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.querySelector('.navbar').classList.remove('hidden');
-      } else {
-        document.querySelector('.navbar').classList.add('hidden');
-      }
-      prevScrollpos = currentScrollPos;
-    }
+// Mendapatkan elemen navbar
+var navbar = document.querySelector('.navbar');
+
+// Mendapatkan posisi scroll awal
+var scrollPosition = window.pageYOffset;
+
+// Mendefinisikan jarak scroll minimum untuk memunculkan/menghilangkan navbar
+var scrollThreshold = 200;
+
+// Menambahkan event listener pada event scroll
+window.addEventListener('scroll', function() {
+  // Mendapatkan posisi scroll saat ini
+  var currentScrollPosition = window.pageYOffset;
+
+  // Menentukan arah scroll (ke atas atau ke bawah)
+  var scrollDirection = currentScrollPosition > scrollPosition ? 'down' : 'up';
+
+  // Memperbarui posisi scroll
+  scrollPosition = currentScrollPosition;
+
+  // Mengubah kelas navbar berdasarkan arah scroll dan jarak scroll threshold
+  if (scrollDirection === 'down' && scrollPosition > scrollThreshold) {
+    navbar.classList.add('hidden');
+  } else if (scrollDirection === 'up' || scrollPosition <= scrollThreshold) {
+    navbar.classList.remove('hidden');
+  }
+});
