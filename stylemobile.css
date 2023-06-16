@@ -9,10 +9,19 @@
     color: white;
   }
 
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
   .logo {
     background-color: black;
     color: white;
     text-align: center;
+    margin-top: 13%;
     width: 100%;
   }
 
@@ -319,14 +328,14 @@
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: medium;
     margin-bottom: 2%;
   }
   .quote {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
-    font-size: 14px;
+    font-size: small;
     padding-bottom: 4%;
   }
 
@@ -408,8 +417,6 @@
     font-weight: bolder;
     margin-top: 10%;
     margin-left: 25%;
-
-
   }
 
   .hanif p {
@@ -536,13 +543,11 @@
 
   .footer1 > p {
     margin-top: -5%;
-    margin-bottom:
-
- -5%;
+    margin-bottom: -5%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
-    font-size: larger;
+    font-size: medium;
     font-weight: bold;
   }
 
@@ -571,6 +576,7 @@
     padding-right: 10%;
     padding-left: 10%;
     text-align: center;
+    font-size: small;
   }
 
   .textfooter a {
