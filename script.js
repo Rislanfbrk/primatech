@@ -41,7 +41,7 @@ window.addEventListener("scroll", function () {
 const sr = ScrollReveal({
   distance: "65px",
   duration: 1600,
-  reset: true,
+  reset: false,
 });
 
 //Content
