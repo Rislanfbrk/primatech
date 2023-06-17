@@ -1,39 +1,31 @@
-// Ambil referensi elemen form dan input pencarian
-const form = document.querySelector("form");
-const searchInput = document.getElementById("search-input");
+// Script untuk bagian search
+const form = document.querySelector("form"); // Ambil referensi elemen form dan input pencarian
+const searchInput = document.getElementById("search-input"); // Ambil referensi elemen form dan input pencarian
 
-// Tambahkan event listener untuk submit form
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function (event) { // Tambahkan event listener untuk submit form
   event.preventDefault(); // Mencegah form dikirim ke halaman lain
 
   const searchText = searchInput.value.trim(); // Ambil teks pencarian dan hapus spasi di awal dan akhir
 
-  // Periksa apakah teks pencarian tidak kosong
-  if (searchText !== "") {
-    // Lakukan pengalihan ke elemen dengan ID yang sesuai dengan teks pencarian
-    window.location.hash = searchText;
+  if (searchText !== "") { // Periksa apakah teks pencarian tidak kosong
+    window.location.hash = searchText; // Lakukan pengalihan ke elemen dengan ID yang sesuai dengan teks pencarian
+
   }
 });
 
-// Mendapatkan elemen navbar
-var navbar = document.querySelector('.navbar');
+// Script untuk mengatur bagian Navbar
+var navbar = document.querySelector('.navbar'); // Mendapatkan elemen navbar
 
-// Mendapatkan posisi scroll awal
-var scrollPosition = window.pageYOffset;
+var scrollPosition = window.pageYOffset; // Mendapatkan posisi scroll awal
 
-// Mendefinisikan jarak scroll minimum untuk memunculkan/menghilangkan navbar
-var scrollThreshold = 200;
+var scrollThreshold = 200; // Mendefinisikan jarak scroll minimum untuk memunculkan/menghilangkan navbar
 
-// Menambahkan event listener pada event scroll
-window.addEventListener('scroll', function() {
-  // Mendapatkan posisi scroll saat ini
-  var currentScrollPosition = window.pageYOffset;
+window.addEventListener('scroll', function() { // Menambahkan event listener pada event scroll
+  var currentScrollPosition = window.pageYOffset;   // Mendapatkan posisi scroll saat ini
 
-  // Menentukan arah scroll (ke atas atau ke bawah)
-  var scrollDirection = currentScrollPosition > scrollPosition ? 'down' : 'up';
+  var scrollDirection = currentScrollPosition > scrollPosition ? 'down' : 'up'; // Menentukan arah scroll (ke atas atau ke bawah)
 
-  // Memperbarui posisi scroll
-  scrollPosition = currentScrollPosition;
+  scrollPosition = currentScrollPosition;   // Memperbarui posisi scroll
 
   // Mengubah kelas navbar berdasarkan arah scroll dan jarak scroll threshold
   if (scrollDirection === 'down' && scrollPosition > scrollThreshold) {
