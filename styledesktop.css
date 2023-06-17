@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   :link {
@@ -18,6 +19,7 @@
     background-color: #000;
     color: #fff;
     transition: top 0.3s;
+    z-index: 100000;
   }
 
   .navbar.hidden {
@@ -58,7 +60,7 @@
   }
 
   .judul {
-    text-align:start ;
+    text-align: start;
     font-size: x-large;
     margin-top: -20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -124,6 +126,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    z-index: 100;
   }
 
   .tegar img {
@@ -157,6 +160,7 @@
     margin-top: 15%;
     margin-left: auto;
     margin-right: 5%;
+    z-index: 100;
   }
 
   .hanif p {
@@ -214,6 +218,10 @@
     margin-left: 10%;
   }
 
+  button {
+    border: none;
+  }
+
   .join {
     background-color: black;
     color: white;
@@ -235,6 +243,7 @@
     margin-top: -27.5%;
     margin-right: 20%;
     margin-bottom: -12%;
+    border-radius: 10px;
   }
 
   .web {
@@ -290,7 +299,12 @@
   .containerimg {
     margin-top: 3%;
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+  }
+
+  .containerimg a:hover {
+    transform: translateY(-5px);
   }
 
   .containerimg > a {
