@@ -44,22 +44,37 @@ const sr = ScrollReveal({
   reset: false,
 });
 
-//Content
-sr.reveal(".judul", { delay: 100, origin: "left" });
-sr.reveal(".maincontent", { delay: 200, origin: "left" });
-sr.reveal(".first", { delay: 200, origin: "right" });
+// Cek ukuran viewport saat halaman dimuat atau saat ukuran viewport berubah
+function checkViewportSize() {
+  // Mendapatkan lebar viewport
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-// VM
-sr.reveal(".judulvm", { delay: 100, origin: "bottom" });
-sr.reveal(".subjudulvm", { delay: 200, origin: "bottom" });
-sr.reveal(".tegar", { delay: 200, origin: "left" });
-sr.reveal(".hanif", { delay: 200, origin: "right" });
+  // Menjalankan ScrollReveal hanya pada device dengan lebar viewport antara 769px dan 1440px
+  if (viewportWidth >= 769 && viewportWidth <= 1440) {
+    //Content
+    sr.reveal(".judul", { delay: 100, origin: "left" });
+    sr.reveal(".maincontent", { delay: 200, origin: "left" });
+    sr.reveal(".first", { delay: 200, origin: "right" });
 
-//support
-sr.reveal(".support", { delay: 100, origin: "bottom" });
+    // VM
+    sr.reveal(".judulvm", { delay: 100, origin: "bottom" });
+    sr.reveal(".subjudulvm", { delay: 200, origin: "bottom" });
+    sr.reveal(".tegar", { delay: 200, origin: "left" });
+    sr.reveal(".hanif", { delay: 200, origin: "right" });
 
-//Pendaftaran
-sr.reveal(".daftar h3", { delay: 200, origin: "bottom" });
-sr.reveal(".pendaftaran", { delay: 300, origin: "bottom" });
-sr.reveal(".join", { delay: 300, origin: "left", distance: "40px" });
-sr.reveal(".web", { delay: 300, origin: "right", distance: "40px" });
+    //support
+    sr.reveal(".support", { delay: 100, origin: "bottom" });
+
+    //Pendaftaran
+    sr.reveal(".daftar h3", { delay: 200, origin: "bottom" });
+    sr.reveal(".pendaftaran", { delay: 300, origin: "bottom" });
+    sr.reveal(".join", { delay: 300, origin: "left", distance: "40px" });
+    sr.reveal(".web", { delay: 300, origin: "right", distance: "40px" });
+  }
+}
+
+// Panggil fungsi checkViewportSize saat halaman dimuat
+window.addEventListener("load", checkViewportSize);
+
+// Panggil fungsi checkViewportSize saat ukuran viewport berubah (resize)
+window.addEventListener("resize", checkViewportSize);

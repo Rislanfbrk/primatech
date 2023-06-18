@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   :link {
@@ -18,6 +19,7 @@
     background-color: #000;
     color: #fff;
     transition: top 0.3s;
+    z-index: 999;
   }
 
   .navbar.hidden {
@@ -350,6 +352,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   :link {
@@ -364,6 +367,7 @@
     background-color: #000;
     color: #fff;
     transition: top 0.3s;
+    z-index: 999;
   }
 
   .navbar.hidden {
@@ -375,7 +379,7 @@
     color: white;
     text-align: center;
     width: 100%;
-    margin-top: 13.3%;
+    margin-top: 13%;
   }
 
   .logo img {
@@ -553,13 +557,14 @@
   .join {
     background-color: black;
     color: white;
+    margin-top: 1%;
     margin-left: 38%;
     padding-top: 2%;
     padding-left: 1%;
     padding-right: 1%;
     padding-bottom: 2%;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 25%;
     cursor: pointer;
     font-family: sans-serif;
@@ -576,11 +581,12 @@
   .web {
     background-color: black;
     color: white;
+    margin-top: 1%;
     margin-left: 40%;
     margin-bottom: 5%;
     padding: 10px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 20%;
     cursor: pointer;
     font-family: sans-serif;
