@@ -44,13 +44,6 @@ const sr = ScrollReveal({
   reset: false,
 });
 
-// Cek ukuran viewport saat halaman dimuat atau saat ukuran viewport berubah
-function checkViewportSize() {
-  // Mendapatkan lebar viewport
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-  // Menjalankan ScrollReveal hanya pada device dengan lebar viewport antara 769px dan 1440px
-  if (viewportWidth >= 769 && viewportWidth <= 1440) {
     //Content
     sr.reveal(".judul", { delay: 100, origin: "left" });
     sr.reveal(".maincontent", { delay: 200, origin: "left" });
@@ -70,11 +63,3 @@ function checkViewportSize() {
     sr.reveal(".pendaftaran", { delay: 300, origin: "bottom" });
     sr.reveal(".join", { delay: 300, origin: "left", distance: "40px" });
     sr.reveal(".web", { delay: 300, origin: "right", distance: "40px" });
-  }
-}
-
-// Panggil fungsi checkViewportSize saat halaman dimuat
-window.addEventListener("load", checkViewportSize);
-
-// Panggil fungsi checkViewportSize saat ukuran viewport berubah (resize)
-window.addEventListener("resize", checkViewportSize);
